@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ariana Terehova</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1 id="title">Ariana Terehova</h1>
+    <nav>
+      <button data-key="btn_about" onclick="showSection('about')">Par mani</button>
+      <button data-key="btn_mma" onclick="showSection('mma')">MMA</button>
+      <button data-key="btn_cat" onclick="showSection('cat')">Mans kaķis</button>
+      <button data-key="btn_contact" onclick="showSection('contact')">Sazināties</button>
+      <select onchange="setLanguage(this.value)">
+        <option value="lv">LV</option>
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+      </select>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Par mani -->
+    <section id="about" class="content-section active">
+      <h2 data-key="about_title">Par mani</h2>
+      <img src="profile.jpg" alt="Ariana foto" class="profile-pic" />
+      <ul>
+        <li data-key="born">24.09.2007 – mana dzimšanas diena</li>
+        <li data-key="school">Es mācos Rīgas Tehniskajā koledžā uz Programmēšanas tehniķi</li>
+        <li data-key="traits">Esmu jautra, smieklīga, sabiedriska un pozitīva</li>
+      </ul>
+    </section>
+
+    <!-- MMA -->
+    <section id="mma" class="content-section hidden">
+      <h2 data-key="mma_title">MMA</h2>
+      <p data-key="mma_text">
+        Mans hobijs ir MMA. Trenējos klubā SevArch. Esmu 2 gadu čempions MMA un Pankrationā. Tas man palīdz būt stiprai, disciplinētai un fokusētai.
+      </p>
+      <div class="gallery">
+        <img src="img/photo_5936226166006466756_y.jpg" alt="MMA foto 1" />
+        <img src="img/photo_5936226166006466757_y.jpg" alt="MMA foto 2" />
+        <img src="img/photo_5936226166006466759_y.jpg" alt="MMA foto 3" />
+      </div>
+    </section>
+
+    <!-- Kaķis -->
+    <section id="cat" class="content-section hidden">
+      <h2 data-key="cat_title">Mans kaķis Koržik</h2>
+      <p data-key="cat_text">Koržikam ir 1 gads. Viņš ir mīļš, rotaļīgs un ļoti ziņkārīgs.</p>
+      <div class="gallery">
+        <img src="img/photo_5936226166006466737_y.jpg" alt="Koržiks 1" />
+        <img src="img/photo_5936226166006466739_y.jpg" alt="Koržiks 2" />
+        <img src="img/photo_5936226166006466755_y.jpg" alt="Koržiks 3" />
+      </div>
+    </section>
+
+    <!-- Sazināties -->
+    <section id="contact" class="content-section hidden">
+      <h2 data-key="contact_title">Sazināties ar mani</h2>
+      <form id="contactForm">
+        <label for="message" data-key="contact_label">Tavs ziņojums:</label>
+        <textarea id="message" required></textarea>
+        <button type="submit" data-key="send_btn">Sūtīt</button>
+      </form>
+      <p><a href="https://instagram.com/_harwix_" target="_blank">Instagram: @_harwix_</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ariana Terehova</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
